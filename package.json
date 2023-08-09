@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@formspree/react": "^2.5.0",
     "@heroicons/react": "^2.0.18",
     "@splinetool/react-spline": "^2.2.6",
     "@splinetool/runtime": "^0.9.383",
