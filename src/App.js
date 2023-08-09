@@ -5,7 +5,7 @@ import Project from './Project';
 import Footer from './Footer';
 import Contact from './Contact';
 
-import projectData from './project-data';
+import { projectData } from './data';
 import Spline from '@splinetool/react-spline';
 
 export default function App() {
@@ -36,7 +36,10 @@ export default function App() {
         <Spline scene="https://prod.spline.design/Q2FmaTr87OtgL4IX/scene.splinecode" />
       </div>
       <About />
-      {projects}
+      <div>
+        <h2 className="font-clashdisplay text-5xl md:text-8xl font-semibold text-center mb-20">Works</h2>
+        {projects}
+      </div>
       <Footer toggleContactModal={toggleContactModal} isContactOpen={isContactOpen} />
       {isContactOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-white">

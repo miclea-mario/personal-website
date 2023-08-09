@@ -12,8 +12,37 @@ export default function Contact({ onClose }) {
     setIsHovered(false);
   };
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(event.target);
+    const data = {};
+
+    formData.forEach((value, key) => {
+      data[key] = value;
+    });
+
+    try {
+      const response = await fetch('./api/submitForm', {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      if (response.ok) {
+        alert('Message sent successfully');
+      } else {
+        alert('Failed to send message');
+      }
+    } catch (error) {
+      console.error('Error sending message:', error);
+    }
+  };
+
   return (
-    <div className="isolate font-plus-jakarta">
+    <div className="isolate font-clashdisplay">
       <div className="mx-auto max-w-2xl text-center">
         <div className="flex justify-end">
           <button type="button" className="hover:bg-dark hover:text-white transition-all rounded-xl text-dark" onClick={onClose}>
@@ -26,7 +55,7 @@ export default function Contact({ onClose }) {
         <h2 className="text-3xl font-bold tracking-tight text-dark sm:text-4xl">Let’s work together.</h2>
         <p className="mt-2 text-lg leading-8 text-gray-600">Write me your ideas</p>
       </div>
-      <form action="#" method="POST" className="mx-auto mt-16 max-w-md sm:mt-20">
+      <form method="POST" className="mx-auto mt-16 max-w-md sm:mt-20" onSubmit={handleSubmit}>
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div className="sm:col-span-2">
             <label htmlFor="name" className="block text-sm font-semibold leading-6 text-dark">Name</label>

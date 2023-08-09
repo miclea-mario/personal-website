@@ -8,13 +8,13 @@ module.exports = {
       colors: {
         dark: '#262729',
         paragraph: '#54575D',
-        gray: '#F6F6F630',
+        customGray: '#F6F6F630',
       },
       backgroundImage: {
-        'grain-texture': "url('assets/grain.jpg')",
+        'grain-texture': "url('../assets/grain.jpg')",
       },
       fontFamily: {
-        'plus-jakarta': ['Plus Jakarta Sans', 'sans-serif'],
+        'clashdisplay': ['ClashDisplay-Variable', 'sans-serif'],
       },
     },
   },

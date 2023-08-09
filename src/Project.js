@@ -39,7 +39,6 @@
       transition: 'filter 0.3s ease-in-out',
     };
 
-    if(distanceToTop<0) console.log('hidden');
     const sectionClass = (isLast || distanceToTop <= 0) ? 'relative' : 'sticky';
 
     return (
@@ -51,16 +50,16 @@
         ></div>
         <div className="relative justify-between w-full">
           <a className="flex" href={url} target="_blank" onMouseEnter={handleHover} onMouseLeave={handleLeave}>
-            <h3 className="text-white font-plus-jakarta text-5xl md:text-8xl font-medium">{title}</h3>
+            <h3 className="text-white font-clashdisplay text-5xl md:text-8xl font-medium">{title}</h3>
             <ArrowUpRightIcon className="h-10 w-10 text-white" />
           </a>
           <div className="block mt-[35px] mb-[25px] h-[1px] border-b-[1px] border-white"></div>
 
           <div className="lg:flex justify-between">
-            <p className="font-plus-jakarta text-white uppercase max-w-[310px] mb-5 md:mb-0">{description}</p>
+            <p className="font-clashdisplay text-white uppercase max-w-[310px] mb-5 md:mb-0">{description}</p>
             <p className=''>
               {tags.map((tag, index) => (
-                <span key={index} className="block lg:inline w-fit md:px-3 md:py-1 uppercase text-sm font-plus-jakarta text-white md:bg-dark rounded-xl md:mr-2">
+                <span key={index} className="block lg:inline w-fit md:px-3 md:py-1 uppercase text-sm font-clashdisplay text-white md:bg-dark rounded-xl md:mr-2">
                 {tag}
               </span>
               ))}

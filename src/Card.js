@@ -6,10 +6,10 @@ export default function Card({ icon, title, description }) {
             {icon}
           </div>
         )}
-        <h3 className='font-plus-jakarta text-dark font-semibold text-2xl mb-2'>
+        <h3 className='font-clashdisplay text-dark font-semibold text-2xl mb-2'>
           {title}
         </h3>
-        <p className='text-paragraph font-plus-jakarta text-md'>
+        <p className='text-paragraph font-clashdisplay text-md'>
           {description}
         </p>
       </div>
