@@ -26,6 +26,13 @@ export const projectData = [
         imageUrl: "/projects-img/bmbtransport.jpg",
         url: "https://bmb-transport.ro/",
         tags: ["wordpress", "responsive", "logo"]
+    },
+    {
+        title: "InfiniteZen",
+        description: "Wellness Center",
+        imageUrl: "/projects-img/infinitezen.jpg",
+        url: "https://infinitezen.ro/",
+        tags: ["wordpress", "responsive", "online appointment"]
     }
 ];
 

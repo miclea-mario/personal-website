@@ -80,13 +80,13 @@ export default function Header({ toggleContactModal, isContactOpen }) {
             About me
           </a>
           <a
-            href="#"
+            href="#projects"
             className="text-sm font-semibold font-clashdisplay leading-6 text-dark hover:bg-gray-600/40 hover:text-white py-1 px-2 rounded-lg transition-all"
           >
             Projects
           </a>
           <a
-            href="#"
+            href="#services"
             className="text-sm font-semibold font-clashdisplay leading-6 text-dark hover:bg-gray-600/40 hover:text-white py-1 px-2 rounded-lg transition-all"
           >
             Services
@@ -147,13 +147,15 @@ export default function Header({ toggleContactModal, isContactOpen }) {
                   About me
                 </a>
                 <a
-                  href="#"
+                  href="#projects"
+                  onClick={toggleMobileMenu}
                   className="-mx-3 block rounded-lg px-3 py-2 text-xl font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Projects
                 </a>
                 <a
-                  href="#"
+                  href="#services"
+                  onClick={toggleMobileMenu}
                   className="-mx-3 block rounded-lg px-3 py-2 text-xl font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Services

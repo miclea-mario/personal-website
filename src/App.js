@@ -31,12 +31,12 @@ export default function App() {
   
   return (
     <div className="bg-grain-texture bg-50p-auto">
-      <div className='h-screen'>
+      <div className='h-[120vh] lg:h-[130vh] xl:h-screen'>
         <Header toggleContactModal={toggleContactModal} isContactOpen={isContactOpen} />
         <Spline scene="https://prod.spline.design/Q2FmaTr87OtgL4IX/scene.splinecode" />
       </div>
       <About />
-      <div>
+      <div id="projects">
         <h2 className="font-clashdisplay text-5xl md:text-8xl font-semibold text-center mb-20">Works</h2>
         {projects}
       </div>

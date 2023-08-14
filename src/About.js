@@ -1,39 +1,70 @@
 import profile_pic from './assets/profile-pic.png'
 import Card from './Card'
 import { PencilIcon, CodeBracketIcon, LightBulbIcon } from "@heroicons/react/24/outline";
-
+import { SiJavascript, SiPhp, SiWordpress, SiReact, SiTailwindcss, SiGithub, SiNodedotjs, SiMysql, SiSass, SiFigma, SiVercel } from "react-icons/si";
 export default function About() {
+
+  const iconComponents = [
+    { icon: <SiJavascript className="w-14 h-14 hover:text-[#F7DF1E] transition-all" />, title: "JavaScript" },
+    { icon: <SiReact className="w-14 h-14 hover:text-[#61DAFB] transition-all" />, title: "React.js" },
+    { icon: <SiNodedotjs className="w-14 h-14 hover:text-[#339933] transition-all" />, title: "Node.js" },
+    { icon: <SiTailwindcss className="w-14 h-14 hover:text-[#3ebff8] transition-all" />, title: "Tailwind CSS" },
+    { icon: <SiSass className="w-14 h-14 hover:text-[#CC6699] transition-all" />, title: "Sass" },
+    { icon: <SiPhp className="w-14 h-14 hover:text-[#777BB4] transition-all" />, title: "PHP" },
+    { icon: <SiWordpress className="w-14 h-14 hover:text-[#28799e] transition-all" />, title: "WordPress" },
+    { icon: <SiMysql className="w-14 h-14 hover:text-[#4479A1] transition-all" />, title: "MySQL" },
+    { icon: <SiFigma className="w-14 h-14" />, title: "Figma" },
+    { icon: <SiGithub className="w-14 h-14" />, title: "GitHub" },
+    { icon: <SiVercel className="w-14 h-14" />, title: "Vercel" },
+  ];
+
   return (
     <section id="about" className="border-t border-dark py-20 md:py-36 mx-auto w-full px-5 lg:px-16 xl:px-20"> 
-      <div className='flex flex-col-reverse md:flex-row'>
+      <div className='flex flex-col-reverse md:flex-row items-center'>
         <div className="md:w-3/5">
-          <h2 className="font-clashdisplay text-5xl text-semibold leading-loose">Hi ✌ I'm Mario Miclea.</h2>
-          <p className="text-dark font-clashdisplay text-semibold text-2xl">As a software developer, I enjoy using my obsessive attention to detail, my unequivocal love for making things, and my mission-driven work ethic to literally change the world. That's why I’m excited to make a big impact at a high growth company.</p>
+          <h2 className="font-clashdisplay text-5xl text-semibold mb-5 mt-5 md:mt-0">Hi ✌ I'm Mario Miclea.</h2>
+          <p className="text-dark font-clashdisplay text-semibold text-2xl">Over the years, I've worked hard to become proficient in a variety of programming languages including HTML, CSS, JavaScript, and PHP. I love being able to take an idea and turn it into a beautiful, functional website that clients can be proud of.
+
+One of the things I'm most proud of in my work is my attention to detail. I believe that every element of a website should be perfect, and I always strive to ensure that everything from the layout to the colors to the text is just right. I'm also a great communicator, and I believe that collaboration is key to creating the best possible website for my clients.</p>
         </div>
         <div className="md:w-2/5">
           <img className="w-96 ml-auto" src={profile_pic} />
         </div>
       </div>
-      <div className="w-full block mt-[100px] mb:mt-20">
+      <div id="services" className="w-full block mt-[100px] mb:mt-20">
         <h2 className="font-clashdisplay text-5xl md:text-8xl font-semibold text-center mb-20">What I Do?</h2>
         <div className='grid grid-cols-1 md:grid-cols-3 grid-flow-row gap-10'>
           <Card
             icon={<PencilIcon className="w-20 h-20" />}
-            title="Graphic Design"
-            description="Nemo enim ipsam voluptatem quia volupta sit aspernatur aut odit aut fugit sed quia consequuntur magni dolores."
+            title="Digital Design"
+            description="From striking graphics to user-friendly interfaces, I create designs that leave a lasting impact. Whether it's crafting a logo, developing marketing materials, or establishing a complete digital brand identity, I ensure that every element aligns seamlessly with the vision and goals."
           />
 
           <Card
             icon={<CodeBracketIcon className="w-20 h-20" />}
-            title="Website Design"
-            description="Custom description goes here."
+            title="Front End Design"
+            description="I can take your website from concept to completion with ease. I understand that each business is unique, and I take the time to get to know you and your specific needs. This allows me to create custom solutions that are tailored to your business and your audience."
           />
 
           <Card
             icon={<LightBulbIcon className="w-20 h-20" />}
-            title="Custom Title"
-            description="Custom description goes here."
+            title="Brainstorming"
+            description="I thrive to dive into the depths of imagination, transforming ideas into practical strategies. Through collaborative dialogue, I'll guide the process, leveraging my diverse skill set and research to uncover fresh insights."
           />
+        </div>
+      </div>
+      <div id="services" className="w-full block mt-[100px] mb:mt-20">
+        <h2 className="font-clashdisplay text-5xl md:text-8xl font-semibold text-center mb-20">My Skill Set</h2>
+        <div className='border border-paragraph p-5 grid grid-cols-3 md:grid-cols-6 gap-10'>
+          {iconComponents.map((item, index) => (
+            <div class="group relative md:m-6 flex justify-center">
+              {item.icon}
+              <span class="font-clashdisplay absolute top-20 scale-0 transition-all rounded bg-paragraph p-2 text-xs text-white group-hover:scale-100">{item.title}</span>
+            </div>
+          ))}
+          <div class="font-clashdisplay flex justify-center items-center">
+              + more
+          </div>
         </div>
       </div>
     </section>
