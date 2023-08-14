@@ -19,7 +19,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="border-t border-dark py-20 md:py-36 mx-auto w-full px-5 lg:px-16 xl:px-20"> 
+    <section id="about" className="border-t border-dark py-20 md:py-36 mx-auto w-full px-5 lg:px-16 xl:px-20 w-full max-w-screen-2xl mx-auto"> 
       <div className='flex flex-col-reverse md:flex-row items-center'>
         <div className="md:w-3/5">
           <h2 className="font-clashdisplay text-5xl text-semibold mb-5 mt-5 md:mt-0">Hi ✌ I'm Mario Miclea.</h2>

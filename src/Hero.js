@@ -1,6 +1,6 @@
 export default function Hero() {
     return (
-    <div className="py-10 md:py-20 px-0">    
+    <div className="py-10 md:py-20 px-0 w-full max-w-screen-2xl mx-auto">    
         <div className="mx-auto text-left">
           <h1 className="text-6xl md:text-9xl leading-[70px] font-semibold text-dark leading-[4rem] md:leading-[8rem]">
             <span className="block font-clashdisplay">Digital Designer &</span>

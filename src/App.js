@@ -31,7 +31,7 @@ export default function App() {
   
   return (
     <div className="bg-grain-texture bg-50p-auto">
-      <div className='h-[120vh] lg:h-[130vh] xl:h-screen'>
+      <div className='h-[120vh] lg:h-[130vh] xl:h-screen w-full max-w-screen-2xl mx-auto'>
         <Header toggleContactModal={toggleContactModal} isContactOpen={isContactOpen} />
         <Spline scene="https://prod.spline.design/Q2FmaTr87OtgL4IX/scene.splinecode" />
       </div>

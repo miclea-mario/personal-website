@@ -37,7 +37,7 @@ export default function Header({ toggleContactModal, isContactOpen }) {
   }, [isMobileMenuOpen, isContactOpen]);
 
   return (
-    <header className="absolute h-full inset-x-0 top-0 z-50 px-5 lg:px-16 xl:px-20">
+    <header className="absolute h-full inset-x-0 top-0 z-50 px-5 lg:px-16 xl:px-20 w-full max-w-screen-2xl mx-auto">
       <nav
         className="flex items-center justify-between py-6"
         aria-label="Global"

@@ -26,6 +26,7 @@ export default function Footer({ toggleContactModal, isContactOpen }) {
 
     return (
         <footer className="bg-dark py-10 px-5 lg:px-16 xl:px-20">
+            <div className='w-full max-w-screen-2xl mx-auto'>
             <div className="flex justify-between border-b border-customGray py-20">
                 <div>
                     <h4 className="text-white uppercase font-clashdisplay text-md mb-5">Have a project in mind?</h4>
@@ -57,6 +58,7 @@ export default function Footer({ toggleContactModal, isContactOpen }) {
                 <div className="self-center">
                     <h3 className="text-white font-clashdisplay font-normal justify-end">Made by Mario Miclea</h3>
                 </div>
+            </div>
             </div>
         </footer>
     )

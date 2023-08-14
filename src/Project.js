@@ -48,7 +48,7 @@
           className="absolute top-0 left-0 h-full w-full bg-scroll bg-center bg-cover filter brightness-120 contrast-109 saturate-0"
           style={divStyle}
         ></div>
-        <div className="relative justify-between w-full">
+        <div className="relative justify-between w-full max-w-screen-2xl mx-auto">
           <a className="flex" href={url} target="_blank" onMouseEnter={handleHover} onMouseLeave={handleLeave}>
             <h3 className="text-white font-clashdisplay text-5xl md:text-8xl font-medium">{title}</h3>
             <ArrowUpRightIcon className="h-10 w-10 text-white" />
