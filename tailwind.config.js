@@ -16,6 +16,20 @@ module.exports = {
       fontFamily: {
         'clashdisplay': ['ClashDisplay-Variable', 'sans-serif'],
       },
+      keyframes: {
+        slideFromLeft: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(100px)' },
+        },
+        slideFromRight: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100px)' },
+        }
+      },
+      animation: {
+        slideFromLeft: 'slideFromLeft 3s ease-in-out',
+        slideFromRight: 'slideFromRight 3s ease-in-out',
+      },
     },
   },
   plugins: [
