@@ -23,9 +23,12 @@ export default function About() {
       <div className='flex flex-col-reverse md:flex-row items-center'>
         <div className="md:w-3/5">
           <h2 className="font-clashdisplay text-5xl text-semibold mb-5 mt-5 md:mt-0">Hi ✌ I'm Mario Miclea.</h2>
-          <p className="text-dark font-clashdisplay text-semibold text-2xl">Over the years, I've worked hard to become proficient in a variety of programming languages including HTML, CSS, JavaScript, and PHP. I love being able to take an idea and turn it into a beautiful, functional website that clients can be proud of.
-
-One of the things I'm most proud of in my work is my attention to detail. I believe that every element of a website should be perfect, and I always strive to ensure that everything from the layout to the colors to the text is just right. I'm also a great communicator, and I believe that collaboration is key to creating the best possible website for my clients.</p>
+          <p className="text-dark font-clashdisplay text-semibold text-2xl">Fueled by a passion for innovation, I constantly seek opportunities to
+enhance my skills. A highly motivated and proactive learner, I excel at
+quickly assimilating information, adapting to new challenges, and solving
+problems with ease. With a positive attitude and strong work ethic, I am
+committed to achieving excellence in all endeavors, aspiring to make a
+positive impact in the technology industry.</p>
         </div>
         <div className="md:w-2/5">
           <img className="w-96 ml-auto" src={profile_pic} />

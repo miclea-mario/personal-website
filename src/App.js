@@ -20,7 +20,6 @@ export default function App() {
   }, []);
 
   const projects = projectData.map(function (project, index) {
-    const isLast = index === projectData.length - 1;
     return (
       <Project
         projectKey={index}
@@ -29,7 +28,6 @@ export default function App() {
         imageUrl={project.imageUrl}
         url={project.url}
         tags={project.tags}
-        isLast={isLast}
       />
     );
   });

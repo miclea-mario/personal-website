@@ -1,7 +1,7 @@
   import React, { useState, useRef, useLayoutEffect } from 'react';
   import { ArrowUpRightIcon } from '@heroicons/react/24/outline';
 
-  export default function Project({ projectKey, title, description, imageUrl, url, tags, isLast }) {
+  export default function Project({ projectKey, title, description, imageUrl, url, tags }) {
     const [isHovered, setIsHovered] = useState(false);
     const elementRef = useRef(null);
     const [distanceToTop, setDistanceToTop] = useState(null);
@@ -14,24 +14,6 @@
       setIsHovered(false);
     };
 
-    
-    
-    const handleScroll = () => {
-      const element = elementRef.current.nextElementSibling;
-      if (element) {
-        const elementRect = element.getBoundingClientRect();
-        const distanceToTop = elementRect.top / window.innerHeight * 100; // Convert to vh
-        setDistanceToTop(distanceToTop);
-      }
-    };
-
-    useLayoutEffect(() => {
-      window.addEventListener('scroll', handleScroll);
-      return () => {
-        window.removeEventListener('scroll', handleScroll);
-      };
-    }, []);
-
     const divStyle = {
       backgroundImage: `url(${process.env.PUBLIC_URL}${imageUrl})`,
       opacity: 0.5,
@@ -39,10 +21,8 @@
       transition: 'filter 0.3s ease-in-out',
     };
 
-    const sectionClass = (isLast || distanceToTop <= 0) ? 'relative' : 'sticky';
-
     return (
-      <section className={`z-${projectKey+1} top-0 h-screen fit-content flex items-center relative bg-dark pt-[400px] pb-[80px] px-5 lg:px-16 xl:px-20 ${sectionClass}`} ref={elementRef}>
+      <section className={`z-${projectKey+1} top-0 h-screen fit-content flex items-center relative bg-dark pt-[400px] pb-[80px] px-5 lg:px-16 xl:px-20 sticky`} ref={elementRef}>
         <div
           id="backgroundDiv"
           className="absolute top-0 left-0 h-full w-full bg-scroll bg-center bg-cover filter brightness-120 contrast-109 saturate-0"
