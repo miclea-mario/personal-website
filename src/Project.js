@@ -36,10 +36,10 @@
           <div className="block mt-[35px] mb-[25px] h-[1px] border-b-[1px] border-white"></div>
 
           <div className="lg:flex justify-between">
-            <p className="font-clashdisplay text-white uppercase max-w-[310px] mb-5 md:mb-0">{description}</p>
+            <p className="subpixel-antialiased font-clashdisplay text-white uppercase max-w-[310px] mb-5 md:mb-0">{description}</p>
             <p className=''>
               {tags.map((tag, index) => (
-                <span key={index} className="block lg:inline w-fit md:px-3 md:py-1 uppercase text-sm font-clashdisplay text-white md:bg-dark rounded-xl md:mr-2">
+                <span key={index} className="subpixel-antialiased block lg:inline w-fit md:px-3 md:py-1 uppercase text-sm font-clashdisplay text-white lg:bg-gradient-to-r from-dark to-black rounded-xl md:mr-2">
                 {tag}
               </span>
               ))}

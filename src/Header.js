@@ -4,6 +4,19 @@ import { socials } from "./data";
 
 export default function Header({ toggleContactModal, isContactOpen }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY;
+    setIsScrolled(scrollPosition > 300);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const socialIcons = socials.map(function (el) {
     return (
@@ -37,14 +50,14 @@ export default function Header({ toggleContactModal, isContactOpen }) {
   }, [isMobileMenuOpen, isContactOpen]);
 
   return (
-    <header className="absolute h-full inset-x-0 top-0 z-50 px-5 lg:px-16 xl:px-20 w-full max-w-screen-2xl mx-auto">
+    <header className={`absolute ${isScrolled ? 'bg-white shadow-sm bg-opacity-50 backdrop-blur' : ''} sticky top-0 h-full inset-x-0 top-0 z-50 px-5 lg:px-16 xl:px-20`}>
       <nav
-        className="flex items-center justify-between py-6"
+        className="flex items-center justify-between py-6 w-full max-w-screen-2xl mx-auto"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
-            <h1 className="mb-3 text-3xl font-clashdisplay leading-none text-dark md:text-2xl lg:text-2xl">
+            <h1 className="text-3xl font-clashdisplay leading-none text-dark md:text-2xl lg:text-2xl">
               Mario Miclea
             </h1>
           </a>
@@ -75,25 +88,25 @@ export default function Header({ toggleContactModal, isContactOpen }) {
         <div className="hidden lg:flex lg:gap-x-5 lg:justify-end items-center">
           <a
             href="#about"
-            className="text-sm font-semibold font-clashdisplay leading-6 text-dark hover:bg-gray-600/40 hover:text-white py-1 px-2 rounded-lg transition-all"
+            className="text-sm cursor-pointer font-semibold font-clashdisplay leading-6 text-dark hover:bg-gray-600/40 hover:text-white py-1 px-2 rounded-lg transition-all"
           >
             About me
           </a>
           <a
             href="#projects"
-            className="text-sm font-semibold font-clashdisplay leading-6 text-dark hover:bg-gray-600/40 hover:text-white py-1 px-2 rounded-lg transition-all"
+            className="text-sm cursor-pointer font-semibold font-clashdisplay leading-6 text-dark hover:bg-gray-600/40 hover:text-white py-1 px-2 rounded-lg transition-all"
           >
             Projects
           </a>
           <a
             href="#services"
-            className="text-sm font-semibold font-clashdisplay leading-6 text-dark hover:bg-gray-600/40 hover:text-white py-1 px-2 rounded-lg transition-all"
+            className="text-sm cursor-pointer font-semibold font-clashdisplay leading-6 text-dark hover:bg-gray-600/40 hover:text-white py-1 px-2 rounded-lg transition-all"
           >
             Services
           </a>
           <button
             onClick={toggleContactModal}
-            className="text-sm font-semibold font-clashdisplay leading-6 text-white bg-dark hover:bg-transparent hover:text-dark border-2 border-dark py-1 px-2 rounded-lg"
+            className="text-sm cursor-pointer font-semibold font-clashdisplay leading-6 text-white bg-dark hover:bg-transparent hover:text-dark border-2 border-dark py-1 px-2 rounded-lg"
           >
             Let's Chat
           </button>
@@ -107,10 +120,10 @@ export default function Header({ toggleContactModal, isContactOpen }) {
       >
         {/* Background backdrop, show/hide based on slide-over state. */}
         <div className="fixed inset-0 z-50"></div>
-        <div className="animate-[sideBarSlide_.5s_ease-in-out] fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-5 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <div className="animate-[sideBarSlide_.5s_ease-in-out] fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white bg-opacity-70 backdrop-blur px-5 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <a href="#">
-              <h1 className="mb-3 text-3xl font-clashdisplay leading-none text-dark md:text-2xl lg:text-2xl">
+              <h1 className="text-3xl font-clashdisplay leading-none text-dark md:text-2xl lg:text-2xl">
                 Mario Miclea
               </h1>
             </a>
@@ -176,7 +189,6 @@ export default function Header({ toggleContactModal, isContactOpen }) {
           </div>
         </div>
       </div>
-      <Hero />
     </header>
   );
 }

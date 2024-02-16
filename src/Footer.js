@@ -36,27 +36,27 @@ export default function Footer({ toggleContactModal, isContactOpen }) {
                   onClick={toggleContactModal}
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
-                  className="text-dark py-3 px-4 rounded-md uppercase bg-white self-center font-clashdisplay">
+                  className="text-dark py-3 px-4 rounded-md uppercase bg-white self-center font-medium font-clashdisplay">
                   Start a project <ArrowSmallRightIcon className={`inline h-6 text-dark transition-all ${isHovered ? 'visible w-6' : 'invisible w-0 -translate-x-5'}`} />
                 </button>
             </div>
             <div className="lg:flex gap-8 justify-between uppercase text-sm mt-10">
-                <div className="mb-5 md:mb-0">
+                <div className="mb-5 lg:mb-0">
                     <h3 className="text-paragraph font-semibold font-clashdisplay">Social</h3>
                     <div className='flex space-x-4 mt-1'>
                         {socialIcons}
                     </div>
                 </div>
-                <div className="mb-5 md:mb-0">
+                <div className="mb-5 lg:mb-0">
                     <h3 className="text-paragraph font-semibold font-clashdisplay">Email</h3>
                     <a href="mailto:miclea.alexandru.mario@gmail.com" className="text-white font-clashdisplay font-semibold">miclea.alexandru.mario@gmail.com</a>
                 </div>
-                <div className="mb-5 md:mb-0">
+                <div className="mb-5 lg:mb-0">
                     <h3 className="text-paragraph font-semibold font-clashdisplay">Phone</h3>
                     <a href="tel:+40730215243" className="text-white font-clashdisplay font-semibold">(+40) 730 215 243</a>
                 </div>
                 <div className="self-center">
-                    <h3 className="text-white font-clashdisplay font-normal justify-end">Made by Mario Miclea</h3>
+                    <h3 className="subpixel-antialiased text-white font-clashdisplay font-normal justify-end">Made by Mario Miclea</h3>
                 </div>
             </div>
             </div>

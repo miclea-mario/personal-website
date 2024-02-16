@@ -60,12 +60,12 @@ positive impact in the technology industry.</p>
         <h2 className="font-clashdisplay text-5xl md:text-8xl font-semibold text-center mb-20">My Skill Set</h2>
         <div className='border border-paragraph p-5 grid grid-cols-3 md:grid-cols-6 gap-10'>
           {iconComponents.map((item, index) => (
-            <div class="group relative md:m-6 flex justify-center">
+            <div className="group relative md:m-6 flex justify-center">
               {item.icon}
-              <span class="font-clashdisplay absolute top-20 scale-0 transition-all rounded bg-paragraph p-2 text-xs text-white group-hover:scale-100">{item.title}</span>
+              <span className="font-clashdisplay absolute top-20 scale-0 transition-all rounded bg-paragraph p-2 text-xs text-white group-hover:scale-100">{item.title}</span>
             </div>
           ))}
-          <div class="font-clashdisplay flex justify-center items-center">
+          <div className="font-clashdisplay flex justify-center items-center">
               + more
           </div>
         </div>

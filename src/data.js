@@ -21,11 +21,11 @@ export const projectData = [
         tags: ["woocommerce", "responsive", "logo"]
     },
     {
-        title: "BMB Transport",
-        description: "Cargo transport services website",
-        imageUrl: "/projects-img/bmbtransport.jpg",
-        url: "https://bmb-transport.ro/",
-        tags: ["wordpress", "responsive", "logo"]
+        title: "Metropolitan Travel",
+        description: "Travel Agency",
+        imageUrl: "/projects-img/metropolitantravel.jpg",
+        url: "https://metropolitantravel.ro",
+        tags: ["wordpress", "ticket system", "user subscription"]
     },
     {
         title: "InfiniteZen",
@@ -33,6 +33,13 @@ export const projectData = [
         imageUrl: "/projects-img/infinitezen.jpg",
         url: "https://infinitezen.ro/",
         tags: ["wordpress", "responsive", "online appointment"]
+    },
+    {
+        title: "BMB Transport",
+        description: "Cargo transport services website",
+        imageUrl: "/projects-img/bmbtransport.jpg",
+        url: "https://bmb-transport.ro/",
+        tags: ["wordpress", "responsive", "logo"]
     }
 ];
 
